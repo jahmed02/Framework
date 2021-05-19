@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Chase Test Script" parallel="false">
+
+        <parameter name="url" value="https://www.chase.com/"></parameter>
+
+    <test name="Chase Home" >
+
+        <classes>
+            <class name = "testChase.TestMenu"></class>
+        </classes>
+
+    </test>
+
+</suite>
