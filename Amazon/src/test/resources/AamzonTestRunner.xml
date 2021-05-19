@@ -10,6 +10,7 @@
         <classes>
             <class name = "search.TestSearch"></class>
 
+
         </classes>
 
     </test>

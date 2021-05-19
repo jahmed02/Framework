@@ -11,5 +11,9 @@ public class TestCNN extends CommonAPI {
         driver.findElement(By.cssSelector("svg.search-icon")).click();
     }
 
+//    @Test
+//    public void test2() {
+//        driver.findElement(By.cssSelector("svg.search-icon")).click();
+//    }
 
 }

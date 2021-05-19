@@ -8,11 +8,11 @@ public class TestMenu extends CommonAPI {
 
     @Test
     public void test1() {
+
         driver.findElement(By.cssSelector("img.single-logo-icon")).click();
+        driver.navigate().refresh();
+        driver.navigate().back();
+        driver.navigate().forward();
     }
 
-//    @Test
-//    public void test2(){
-//        driver.findElement(By.id("userId-text-input-field")).click();
-//    }
 }
