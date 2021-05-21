@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="YouTube Test Script" parallel="false">
+
+        <parameter name="url" value="https://www.youtube.com/"></parameter>
+
+    <test name="YouTube Home" >
+
+        <classes>
+<!--            <class name = "homePage.TestYouTube"></class>-->
+            <class name="homePage.DropDown"></class>
+
+
+        </classes>
+
+    </test>
+
+</suite>

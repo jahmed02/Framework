@@ -3,12 +3,15 @@ package base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class CommonAPI {
@@ -71,10 +74,10 @@ public class CommonAPI {
 
     //generic typing method for all modules
     public void typeOnWebElement(String locator, String value){
-        try {
+        try{
             driver.findElement(By.cssSelector(locator)).sendKeys(value);
-        }catch (Exception ex1){
-            try {
+        }catch (Exception ex1) {
+            try{
                 driver.findElement(By.id(locator)).sendKeys(value);
             }catch (Exception ex2) {
                 try {
@@ -88,15 +91,15 @@ public class CommonAPI {
 
     //generic type and hit enter method for all modules
     public void typeOnWebElementAndEnter(String locator, String value){
-        try {
+        try{
             driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
         }catch (Exception ex1) {
             try {
-            driver.findElement(By.id(locator)).sendKeys(value, Keys.ENTER);
-        }catch (Exception ex2) {
+                driver.findElement(By.id(locator)).sendKeys(value, Keys.ENTER);
+            }catch (Exception ex2){
                 try {
                     driver.findElement(By.className(locator)).sendKeys(value, Keys.ENTER);
-                }catch (Exception ex3) {
+                }catch (Exception ex3){
                     driver.findElement(By.xpath(locator)).sendKeys(value, Keys.ENTER);
                 }
             }
@@ -119,6 +122,38 @@ public class CommonAPI {
             }
         }
     }
+
+    // passing only List<WebElement>  method for elementList (stroting the locators at first)
+    public List<WebElement> getListOfWebElement(String locator) {
+        List<WebElement> elementList = driver.findElements(By.cssSelector(locator));
+        return elementList;
+    }
+
+    // passing the webelements through a new variable (elements)
+    public List<String> getListOText(List<WebElement> elements) {
+        List<String> listOfText = new ArrayList<>();
+        for (WebElement element: elements){
+            listOfText.add(element.getText());
+        }
+        return listOfText;
+    }
+
+    public void typeByXpath(String locator, String value) {
+        driver.findElement(By.xpath(locator)).sendKeys(value,Keys.ENTER);
+    }
+
+    public void typeByID(String locator, String value) {
+        driver.findElement(By.id(locator)).sendKeys(value,Keys.ENTER);
+    }
+
+    public void clearByID(String locator) {
+        driver.findElement(By.id(locator)).clear();
+    }
+
+
+
+
+
 
 
 }
