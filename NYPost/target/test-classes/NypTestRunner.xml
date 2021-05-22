@@ -9,6 +9,7 @@
 
         <classes>
             <class name = "news.TestNewsMenu"></class>
+<!--            <class name="news.DropDown"></class>-->
 
         </classes>
 

@@ -13,6 +13,7 @@ public class TestYouTube extends CommonAPI {
 
         //driver.findElement(By.xpath("//*[@id=\"text\"]")).click();
 
-        driver.findElement(By.id("guide-icon")).click();
+        //driver.findElement(By.id("guide-icon")).click();
+        driver.findElement(By.cssSelector("span.guide-entry-count")).click();
     }
 }

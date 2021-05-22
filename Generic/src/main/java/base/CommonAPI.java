@@ -47,7 +47,6 @@ public class CommonAPI {
         driver.manage().window().maximize();
     }
 
-
     @AfterMethod
     public void cleanUp() {
         driver.close();
@@ -123,19 +122,32 @@ public class CommonAPI {
         }
     }
 
-    // passing only List<WebElement>  method for elementList (stroting the locators at first)
-    public List<WebElement> getListOfWebElement(String locator) {
+    // single method to get text of webElements (using cssSelector)
+    public List<String> getListOfText(String locator){
         List<WebElement> elementList = driver.findElements(By.cssSelector(locator));
-        return elementList;
-    }
-
-    // passing the webelements through a new variable (elements)
-    public List<String> getListOText(List<WebElement> elements) {
-        List<String> listOfText = new ArrayList<>();
-        for (WebElement element: elements){
-            listOfText.add(element.getText());
+        List<String> listOfText = new ArrayList<String>();
+        for(WebElement element: elementList) {
+            System.out.println(element.getText());
         }
         return listOfText;
+    }
+
+    // using xpath locator
+    // single method to get text of webElements (using xpath)
+    public List<String> getListOfTextXpath(String locator){
+        List<WebElement> elementList = driver.findElements(By.xpath(locator));
+        List<String> listOfText = new ArrayList<String>();
+        for(WebElement element: elementList) {
+            System.out.println(element.getText());
+        }
+        return listOfText;
+    }
+
+    //simple print text method
+    public void printText(List<String> list) {
+        for(String string: list) {
+            System.out.println(string);
+        }
     }
 
     public void typeByXpath(String locator, String value) {
@@ -151,6 +163,20 @@ public class CommonAPI {
     }
 
 
+     /*// (1) passing only List<WebElement>  method for elementList (storing the locators at first)
+    public List<WebElement> getListOfWebElement(String locator) {
+        List<WebElement> elementList = driver.findElements(By.cssSelector(locator));
+        return elementList;
+    }
+
+    //(2)  passing the webElements through a new variable (elements)
+    public List<String> getListOText(List<WebElement> elements) {
+        List<String> listOfText = new ArrayList<String>();
+        for (WebElement element: elements){
+            listOfText.add(element.getText());
+        }
+        return listOfText;
+    }     //    method and 1 and 2 are realted*/
 
 
 

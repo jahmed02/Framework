@@ -15,6 +15,7 @@
         <module>Chase</module>
         <module>NYPost</module>
         <module>Youtube</module>
+        <module>Facebook</module>
     </modules>
 
     <properties>

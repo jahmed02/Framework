@@ -8,8 +8,8 @@
     <test name="YouTube Home" >
 
         <classes>
-<!--            <class name = "homePage.TestYouTube"></class>-->
-            <class name="homePage.DropDown"></class>
+            <class name = "homePage.TestYouTube"></class>
+<!--            <class name="homePage.DropDown"></class>-->
 
 
         </classes>
