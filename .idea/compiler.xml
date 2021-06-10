@@ -7,8 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CNN" />
+        <module name="GoogleHome" />
+        <module name="TheNyTImes" />
         <module name="Generic" />
         <module name="Youtube" />
+        <module name="Instagram" />
         <module name="Amazon" />
         <module name="NYPost" />
         <module name="Facebook" />

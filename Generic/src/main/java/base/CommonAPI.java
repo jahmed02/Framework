@@ -57,10 +57,10 @@ public class CommonAPI {
     // generic click method for all modules
     public void clickOnWebElement(String locator) {
         try {
-            driver.findElement(By.cssSelector(locator)).clear();
+            driver.findElement(By.id(locator)).clear();
         } catch (Exception ex1) {
             try {
-                driver.findElement(By.id(locator)).click();
+                driver.findElement(By.cssSelector(locator)).click();
             } catch (Exception ex2) {
                 try {
                     driver.findElement(By.className(locator)).clear();
@@ -74,10 +74,10 @@ public class CommonAPI {
     //generic typing method for all modules
     public void typeOnWebElement(String locator, String value){
         try{
-            driver.findElement(By.cssSelector(locator)).sendKeys(value);
+            driver.findElement(By.id(locator)).sendKeys(value);
         }catch (Exception ex1) {
             try{
-                driver.findElement(By.id(locator)).sendKeys(value);
+                driver.findElement(By.cssSelector(locator)).sendKeys(value);
             }catch (Exception ex2) {
                 try {
                     driver.findElement(By.className(locator)).sendKeys(value);
@@ -91,10 +91,10 @@ public class CommonAPI {
     //generic type and hit enter method for all modules
     public void typeOnWebElementAndEnter(String locator, String value){
         try{
-            driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
+            driver.findElement(By.id(locator)).sendKeys(value, Keys.ENTER);
         }catch (Exception ex1) {
             try {
-                driver.findElement(By.id(locator)).sendKeys(value, Keys.ENTER);
+                driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
             }catch (Exception ex2){
                 try {
                     driver.findElement(By.className(locator)).sendKeys(value, Keys.ENTER);
@@ -108,10 +108,10 @@ public class CommonAPI {
     //generic clear method for all modules
     public void clearInputField(String locator) {
         try {
-            driver.findElement(By.cssSelector(locator)).clear();
+            driver.findElement(By.id(locator)).clear();
         }catch (Exception ex1) {
             try {
-                driver.findElement(By.id(locator)).clear();
+                driver.findElement(By.cssSelector(locator)).clear();
             }catch (Exception ex2) {
                 try {
                 driver.findElement(By.className(locator)).clear();
@@ -160,6 +160,10 @@ public class CommonAPI {
 
     public void clearByID(String locator) {
         driver.findElement(By.id(locator)).clear();
+    }
+
+    public static void click(){
+        
     }
 
 

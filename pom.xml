@@ -16,6 +16,9 @@
         <module>NYPost</module>
         <module>Youtube</module>
         <module>Facebook</module>
+        <module>TheNyTImes</module>
+        <module>GoogleHome</module>
+        <module>Instagram</module>
     </modules>
 
     <properties>
