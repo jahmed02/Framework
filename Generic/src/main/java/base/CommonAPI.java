@@ -35,12 +35,8 @@ public class CommonAPI {
         driver.get(url);
 
 
-        /*//other url methods
-        driver.navigate().to(url);   // alternate of driver.get() to launch a website
-        driver.navigate().refresh();
-        driver.navigate().back();
-        driver.navigate().forward();
-        driver.navigate().to("");   // string */
+        //other url methods
+        //driver.navigate().to(url);   // alternate of driver.get() to launch a website
 
 
         // maximizing the opening window by using selenium action class
@@ -49,15 +45,15 @@ public class CommonAPI {
 
     @AfterMethod
     public void cleanUp() {
-        driver.close();
+        //driver.close();
 
-        // driver.quit();            // for closing all the windows running for tests
+        driver.quit();            // for closing all the windows running for tests
     }
 
     // generic click method for all modules
     public void clickOnWebElement(String locator) {
         try {
-            driver.findElement(By.id(locator)).clear();
+            driver.findElement(By.id(locator)).click();
         } catch (Exception ex1) {
             try {
                 driver.findElement(By.cssSelector(locator)).click();

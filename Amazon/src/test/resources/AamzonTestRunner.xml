@@ -9,11 +9,9 @@
 
         <classes>
 <!--            <class name = "search.TestSearch"></class>-->
-<!--            <class name="search.DropDownMenu"></class>-->
+            <class name="search.DropDownMenu"></class>
 <!--            <class name="search.AssertionDemo"></class>-->
-            <class name="search.CheckingLocators"></class>
-
-
+<!--            <class name="search.CheckingLocators"></class>-->
         </classes>
 
     </test>

@@ -9,6 +9,7 @@
 
         <classes>
             <class name = "news.TestCNN"></class>
+<!--            <class name="news.FindByMethodTest"></class>-->
 
         </classes>
 

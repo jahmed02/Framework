@@ -3,7 +3,8 @@
 
 <suite name="Chase Test Script" parallel="false">
 
-        <parameter name="url" value="https://www.chase.com/"></parameter>
+<!--        <parameter name="url" value="https://www.chase.com/"></parameter>-->
+    <parameter name="url" value="https://www.google.com/"></parameter>
 
     <test name="Chase Home" >
 
